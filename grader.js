@@ -71,7 +71,7 @@ if(require.main == module) {
     program
         .option('-f, --file <html_file>', 'Path to index.html', clone(assertFileExists), HTMLFILE_DEFAULT)
         .option('-c, --checks <check_file>', 'Path to checks.json', clone(assertFileExists), CHECKSFILE_DEFAULT)
-        .option('-u, --url <url_path', 'url to file')
+        .option('-u, --url <url_path>', 'url to file')
         .parse(process.argv);
         
     if (program.url){
