@@ -45,7 +45,7 @@ var loadChecks = function(checksfile) {
     return JSON.parse(fs.readFileSync(checksfile));
 };
 
-var checkHtmlFile = function(htmlfile, checksfile) {
+var checkHtmlFile = function(html, checksfile) {
   if (html == "index.html") {
         $ = cheerioHtmlFile(html);
     } else {
