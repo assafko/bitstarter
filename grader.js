@@ -45,13 +45,13 @@ var loadChecks = function(checksfile) {
     return JSON.parse(fs.readFileSync(checksfile));
 };
 
+
 var checkHtmlFile = function(html, checksfile) {
-  if (html == "index.html") {
+    if (html == "index.html") {
         $ = cheerioHtmlFile(html);
     } else {
         $ = cheerio.load(html);
     }
-    
     var checks = loadChecks(checksfile).sort();
     var out = {};
     for(var ii in checks) {
